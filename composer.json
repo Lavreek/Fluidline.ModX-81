@@ -1,0 +1,22 @@
+{
+    "name": "modx/fluidline",
+    "description": "ModX CMS for site https://fluid-line.ru",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Fluidline\\" : ""
+        }
+    },
+    "authors": [
+        {
+            "name": "lavreek",
+            "email": "lavreeksolacki@yandex.ru"
+        }
+    ],
+    "require": {
+        "symfony/dotenv": "^6.2",
+        "monolog/monolog": "^3.3",
+        "ext-pdo": "*",
+        "symfony/webpack-encore-bundle": "^1.16"
+    }
+}

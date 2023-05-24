@@ -1,0 +1,7 @@
+.idea
+.env
+
+/assets/templates/source
+/core/cache
+/node_modules
+/vendor

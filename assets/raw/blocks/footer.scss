@@ -1,0 +1,30 @@
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 49px 261px;
+    background: url("/assets/templates/images/footer/pixel/footer-background.png");
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 25px;
+
+        .link {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+
+            color: #999999;
+        }
+
+        .title {
+            @extend .link;
+
+            color: #CCCCCC !important;
+        }
+    }
+}
