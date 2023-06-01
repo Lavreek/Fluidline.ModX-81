@@ -91,6 +91,8 @@ header {
         background: rgba(0, 0, 0, .65) !important;
         background-color: rgba(0, 0, 0, .65) !important;
 
+        z-index: 1;
+
         .navigation {
             .link {
                 @extend .btn !optional;

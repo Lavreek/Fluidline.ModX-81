@@ -1,0 +1,56 @@
+// Little Description
+._64787a1a85c80 {
+    display: grid;
+    grid-template-columns: 32% 66%;
+    column-gap: 54px;
+
+    margin-top: 160px;
+    margin-bottom: 120px;
+
+    .little-title {
+        p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+
+            text-transform: uppercase;
+
+            color: #000000;
+        }
+    }
+
+    .little-description {
+        p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 26px;
+
+            text-align: justify;
+
+            color: #212121;
+        }
+    }
+}
+// Little Description
+
+// Page Description
+._647860f49077c {
+    margin: 57px 0;
+
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 25px;
+
+      text-align: justify;
+
+      color: #212121;
+    }
+}
+// Page Description

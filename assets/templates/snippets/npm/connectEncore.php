@@ -8,6 +8,9 @@ if (!is_dir(MODX_ENCORE_PATH)) {
 if (count($files) < 1) {
     throw new Exception("Encore folder is empty.");
 }
+if (!isset($only)) {
+    $only = "";
+}
 
 foreach ($files as $file) {
     if (preg_match('#.+(\.\w+)#', $file, $match)) {
@@ -16,10 +19,22 @@ foreach ($files as $file) {
 
             switch ($match[1]) {
                 case '.js' : {
+                    if (!empty($only)) {
+                        if ($match[1] != ".$only") {
+                            break;
+                        }
+                    }
+
                     echo "<script type='text/javascript' src='$filepath' defer></script>" . "\t";
                     break;
                 }
                 case '.css' : {
+                    if (!empty($only)) {
+                        if ($match[1] != ".$only") {
+                            break;
+                        }
+                    }
+
                     echo "<link rel='stylesheet' href='$filepath'>" . "\t";
                     break;
                 }

@@ -8,5 +8,13 @@ body {
     min-width: 100vw;
     min-height: 100vh;
 }
+
+.b-p {
+    padding: 0 420px;
+}
+
 @import "blocks/header";
 @import "blocks/footer";
+@import "optionally/production_direction.scss";
+@import "optionally/descriptions.scss";
+@import "optionally/products";
