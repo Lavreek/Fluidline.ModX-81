@@ -104,14 +104,22 @@ header {
                 line-height: 18px;
 
                 color: #FFFFFF;
+
+                &:hover {
+                    color: black !important;
+                    background: white !important;
+                    background-color: white !important;
+                }
             }
 
-            .lh:hover {
+            .link.active {
                 color: black !important;
                 background: white !important;
                 background-color: white !important;
+                border: 0;
             }
         }
+
         .search {
             width: 317px;
             position: relative;

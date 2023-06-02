@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-        <a href="/">
+        <a href="[[~1]]">
             <img src="/assets/templates/images/header/logo.svg" alt="logo">
         </a>
     </div>
@@ -30,11 +30,11 @@
     </div>
     <div class="header-mini">
         <div class="navigation">
-            <a class="link lh" href="/">Продукция</a>
-            <a class="link lh" href="/">О компании</a>
-            <a class="link lh" href="/">Новости</a >
-            <a class="link lh" href="/">Контакты</a>
-            <a class="link lh" href="/">Справочная информация</a>
+            <a class="link[[If? &subject=`[[*id]]` &operator=`EQ` &operand=`1` &then=` active`]]" href="[[~1]]">Продукция</a>
+            <a class="link[[If? &subject=`[[*id]]` &operator=`EQ` &operand=`31` &then=` active`]]" href="[[~31]]">О компании</a>
+            <a class="link[[If? &subject=`[[*id]]` &operator=`EQ` &operand=`-1` &then=` active`]]" href="/">Новости</a >
+            <a class="link[[If? &subject=`[[*id]]` &operator=`EQ` &operand=`-1` &then=` active`]]" href="/">Контакты</a>
+            <a class="link[[If? &subject=`[[*id]]` &operator=`EQ` &operand=`-1` &then=` active`]]" href="/">Справочная информация</a>
         </div>
         <div class="search">
             <input type="text" value="">

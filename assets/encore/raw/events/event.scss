@@ -1,0 +1,58 @@
+._6479eb28d887c {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    background: url("/assets/templates/images/events/pixel/event-background.png");
+
+    margin-bottom: 36px;
+
+    .title {
+        margin-top: 63px;
+        margin-bottom: 29px;
+
+        h1 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 23px;
+            line-height: 28px;
+
+            text-transform: uppercase;
+
+            color: #000000;
+        }
+    }
+    ._6479ec9cbc91f {
+        display: grid;
+        grid-template-columns: 20% 77.5%;
+        column-gap: 2.5%;
+        align-items: center;
+        margin-bottom: 36px;
+
+        .event-date {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+
+            color: #000000;
+        }
+
+        .event-title a {
+            display: block;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 23px;
+
+            color: #0876A6;
+
+            text-decoration: none;
+        }
+    }
+}
