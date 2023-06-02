@@ -1,0 +1,101 @@
+._6479b6ff84ab4 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10%;
+
+    width: 100%;
+
+    .planned, .completed {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            column-gap: 28px;
+            margin-bottom: 42px;
+
+            h1 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 20px;
+
+                text-transform: uppercase;
+
+                color: #000000;
+
+                margin: 0;
+            }
+        }
+
+        ._6479c26173ade {
+            display: grid;
+            grid-template-columns: 25% 70%;
+            column-gap: 5%;
+
+            align-items: center;
+
+            margin-bottom: 32px;
+
+            .webinar-date {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+
+                color: #454545;
+            }
+
+            .webinar-description {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 22px;
+
+                color: #0876A6;
+
+                text-decoration: none;
+            }
+        }
+
+        .only-title {
+            @extend ._6479c26173ade;
+
+            grid-template-columns: 1fr;
+        }
+    }
+    .all-webinars {
+        display: flex;
+        width: 100%;
+
+        margin-top: 37px;
+        margin-bottom: 69px;
+
+        .webinars {
+            @extend .btn;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 20px;
+
+            text-align: center;
+
+            color: #FFFFFF;
+
+            background: #2088B3;
+            border-radius: 7px;
+
+            margin: auto;
+            padding: 12px 73px;
+        }
+    }
+}

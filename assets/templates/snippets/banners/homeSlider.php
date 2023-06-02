@@ -1,7 +1,13 @@
 <?php
 global $modx;
 
-$findSlider = $modx->query("SELECT `id` FROM `modx_site_content` WHERE `pagetitle` IN ('Слайдер', 'Slider')");
+$resourceName = "Слайдер";
+$anotherName = "Slider";
+$parent = 0;
+
+$findSlider = $modx->query(
+    sprintf("SELECT `id` FROM `modx_site_content` WHERE `pagetitle` IN ('%s', '%s') AND `parent` = %d", $resourceName, $anotherName, $parent)
+);
 
 if (!is_bool($findSlider)) {
     $find = $findSlider->fetch(PDO::FETCH_ASSOC);

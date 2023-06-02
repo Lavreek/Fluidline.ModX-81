@@ -28,10 +28,46 @@
             text-decoration: none;
 
             .image-block {
-                height: 123px;
+                position: relative;
+                height: 125px;
                 border-radius: 7px 7px 0 0;
 
                 background-size: 100% !important;
+
+                .tinting {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    opacity: 0;
+
+                    transition: .5s;
+
+                    background: rgba(255, 255, 255, 0.82);
+                    border-radius: 6px;
+
+
+                    p {
+                        margin: 7px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 18px;
+
+                        color: #000000;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
             }
 
             .title-block {
@@ -43,6 +79,7 @@
                 height: 50px;
                 margin: auto;
 
+                padding: 0 20px;
                 background: url("/assets/templates/images/preview/home/pixel/product-view-background.png");
                 border-radius: 0 0 7px 7px;
 
