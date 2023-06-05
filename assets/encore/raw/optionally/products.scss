@@ -1,7 +1,7 @@
 ._647866942372f {
     margin: 57px 0;
 
-    .products-title {
+    .news-title {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 600;
@@ -15,9 +15,9 @@
         margin-bottom: 46px;
     }
 
-    .products-view {
+    .news-view {
         display: grid;
-        grid-template-columns: repeat(3, 325px);
+        grid-template-columns: repeat(3, 324px);
         column-gap: 54px;
         row-gap: 30px;
 
@@ -29,7 +29,7 @@
 
             .image-block {
                 position: relative;
-                height: 125px;
+                height: 124px;
                 border-radius: 7px 7px 0 0;
 
                 background-size: 100% !important;

@@ -13,6 +13,9 @@ import './raw/app.scss';
 // start the Stimulus application
 import './bootstrap';
 
+
 require('bootstrap/dist/js/bootstrap.min');
 require('bootstrap/js/dist/carousel');
+
+import './scripts/pdfjs-view';
 

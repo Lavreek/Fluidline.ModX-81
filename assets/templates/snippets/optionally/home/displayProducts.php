@@ -1,13 +1,7 @@
 <?php
 global $modx;
 
-$context = "prd";
-$parent = 0;
-$published = 1;
-
-$format = "SELECT `id`, `pagetitle` FROM `modx_site_content` WHERE `context_key` = '%s' AND `parent` = %s AND `published` = %s";
-$query = sprintf($format, $context, $parent, $published);
-$find = $modx->query($query);
+$find = $modx->query("SELECT `id`, `pagetitle` FROM `modx_site_content` WHERE `published` = 1 AND `parent` = 40");
 
 if (!is_bool($find)) {
     $products = $find->fetchAll(PDO::FETCH_ASSOC);
@@ -23,24 +17,22 @@ if (!is_bool($find)) {
 
             foreach ($params as $param) {
                 switch ($param['tmplvarid']) {
-                    case 1 : {
-                        $product += ['src' => $param['value']];
+                    case pageImage : {
+                        $product += ['pageImage' => $param['value']];
                         break;
                     }
-                    case 2 : {
-                        $product += ['mini_description' => $param['value']];
+                    case pageMiniDescription : {
+                        $product += ['pageMiniDescription' => $param['value']];
                         break;
                     }
                 }
             }
         }
 
-        $product['alt'] = $product['pagetitle'];
-
         $htmlProductCards .= $modx->getChunk('productCard', $product);
     }
 
-    return $modx->getChunk('productView', ['cards' => $htmlProductCards]);
+    return $modx->getChunk('productView', ['items' => $htmlProductCards]);
 } else {
     return null;
 }

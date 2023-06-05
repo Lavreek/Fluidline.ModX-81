@@ -1,0 +1,90 @@
+._647d8f2fe4c3f {
+    margin: 57px 0;
+
+    .news-title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 28px;
+
+        text-transform: uppercase;
+
+        color: #000000;
+
+        margin-bottom: 46px;
+    }
+
+    .news-view {
+        display: grid;
+        grid-template-columns: repeat(3, 324px);
+        column-gap: 54px;
+        row-gap: 30px;
+
+        ._647d8f51c37dd {
+            display: flex;
+            flex-direction: column;
+
+            text-decoration: none;
+
+            .news-time {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+
+                color: #999999;
+
+                margin-bottom: 23px;
+            }
+
+            img {
+                border-radius: 7px 7px 0 0;
+            }
+
+            .news-description {
+                display: flex;
+                align-items: center;
+
+                padding: 10px 25px;
+                height: 100%;
+
+                background: url("/assets/templates/images/preview/home/pixel/product-view-background.png");
+                border-radius: 0 0 7px 7px;
+
+                p {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19px;
+                    align-items: center;
+
+                    color: #FFFFFF;
+
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .news-show {
+        display: flex;
+        justify-content: end;
+
+        margin-top: 25px;
+
+        a {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: right;
+            text-decoration-line: underline;
+
+            color: #898989;
+        }
+    }
+}

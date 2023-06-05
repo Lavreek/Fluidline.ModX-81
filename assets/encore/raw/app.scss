@@ -10,7 +10,11 @@ body {
 }
 
 .b-p {
-    padding: 0 420px;
+    padding: 0 calc(180px + (100vw - 1440px) * (240 / 480));
+
+    @media (max-width: 1440px) {
+        padding: 0 180px;
+    }
 }
 
 @import "blocks/header";
@@ -21,3 +25,5 @@ body {
 @import "banners/banner";
 @import "webinars/webinar";
 @import "events/event";
+@import "news/news";
+@import "certificates/certs";

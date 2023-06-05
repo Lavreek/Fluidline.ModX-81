@@ -1,15 +1,12 @@
 <?php
 global $modx;
 
-const eventName = "Мероприятия";
-const eventNameAnother = "Events";
+$eventName = "Мероприятия";
+$eventNameAnother = "Events";
 $parent = 0;
 
-const eventsDateStart = 4;
-const eventsDateEnd = 5;
-
 $findEvents = $modx->query(
-    sprintf("SELECT `id` FROM `modx_site_content` WHERE `pagetitle` IN ('%s', '%s') AND `parent` = %d", eventName, eventNameAnother, $parent)
+    sprintf("SELECT `id` FROM `modx_site_content` WHERE `parent` = 0 AND `pagetitle` IN ('%s', '%s')", $eventName, $eventNameAnother)
 );
 
 if (is_bool($findEvents)) {
@@ -18,10 +15,10 @@ if (is_bool($findEvents)) {
 
 $events = $findEvents->fetch(PDO::FETCH_ASSOC);
 
-const eventsQuery = " SELECT `id`, `pagetitle` FROM `modx_site_content` WHERE `parent` = %s LIMIT 6";
+$eventsQuery = " SELECT `id`, `pagetitle` FROM `modx_site_content` WHERE `parent` = %s LIMIT 6";
 
 $findEventsResources = $modx->query(
-    sprintf(eventsQuery, $events['id'])
+    sprintf($eventsQuery, $events['id'])
 );
 
 if (!is_bool($findEventsResources)) {
@@ -30,7 +27,6 @@ if (!is_bool($findEventsResources)) {
     $htmlEvents = "";
 
     foreach ($eventResources as $event) {
-
         $findEventsParams = $modx->query(
             sprintf("SELECT `tmplvarid`, `value` FROM `modx_site_tmplvar_contentvalues` WHERE `contentid` = %s", $event['id'])
         );

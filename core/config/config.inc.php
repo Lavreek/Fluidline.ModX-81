@@ -1,12 +1,24 @@
 <?php
 
 require_once dirname(__DIR__, 2) . "/vendor/autoload.php";
+
 use Symfony\Component\Dotenv\Dotenv;
 
 $dotenv = new Dotenv();
 $dotenv->load(dirname(__DIR__, 2) . '/.env');
 
 $base_path = $_ENV['BASE_PATH'] ?: dirname(__DIR__, 2);
+
+/**
+ * Custom const variables
+ */
+
+const pageImage = 1;
+const pageMiniDescription = 2;
+const webinarDate = 3;
+const eventsDateStart = 4;
+const eventsDateEnd = 5;
+
 
 /**
  *  MODX Configuration file

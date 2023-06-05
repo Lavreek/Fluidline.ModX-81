@@ -136,11 +136,11 @@ final class Utils
         static $cached = null;
         static $cafiles = [
             // Red Hat, CentOS, Fedora (provided by the ca-certificates package)
-            '/etc/pki/tls/certs/ca-bundle.crt',
+            '/etc/pki/tls/certificates/ca-bundle.crt',
             // Ubuntu, Debian (provided by the ca-certificates package)
-            '/etc/ssl/certs/ca-certificates.crt',
+            '/etc/ssl/certificates/ca-certificates.crt',
             // FreeBSD (provided by the ca_root_nss package)
-            '/usr/local/share/certs/ca-root-nss.crt',
+            '/usr/local/share/certificates/ca-root-nss.crt',
             // SLES 12 (provided by the ca-certificates package)
             '/var/lib/ca-certificates/ca-bundle.pem',
             // OS X provided by homebrew (using the default path)
