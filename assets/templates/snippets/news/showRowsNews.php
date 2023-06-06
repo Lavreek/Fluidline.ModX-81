@@ -14,7 +14,7 @@ if (is_bool($findNews)) {
 
 $news = $findNews->fetch(PDO::FETCH_ASSOC);
 
-$newsQuery = " SELECT `id`, `pagetitle`, `longtitle`, `publishedon` FROM `modx_site_content` WHERE `parent` = %s ORDER BY `menuindex` DESC LIMIT 3";
+$newsQuery = " SELECT `id`, `pagetitle`, `longtitle`, `publishedon`, `introtext` FROM `modx_site_content` WHERE `parent` = %s ORDER BY `menuindex` DESC";
 
 $findNewsResources = $modx->query(
     sprintf($newsQuery, $news['id'])
@@ -43,12 +43,12 @@ if (!is_bool($findNewsResources)) {
             }
         }
 
-        $news['publishedon'] = date("j F Y", $news['publishedon']);
+        $news['publishedon'] = date("d.m.Y", $news['publishedon']);
 
-        $htmlNews .= $modx->getChunk('newsCard', $news);
+        $htmlNews .= $modx->getChunk('newsRowItem', $news);
     }
 
-    return $modx->getChunk('newsView', ['items' => $htmlNews]);
+    return $modx->getChunk('newsRowView', ['items' => $htmlNews]);
 
 } else {
     return null;

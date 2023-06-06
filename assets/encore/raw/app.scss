@@ -50,6 +50,11 @@ body {
 @import "banners/banner";
 @import "webinars/webinar";
 @import "events/event";
-@import "news/news";
+
+@import "news/news-cards";
+@import "news/news-rows";
+
 @import "certificates/certs";
 @import "docs/docs";
+
+@import "pages/company/company";
