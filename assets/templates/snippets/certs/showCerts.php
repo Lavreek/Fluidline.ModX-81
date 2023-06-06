@@ -49,33 +49,3 @@ if (is_bool($certResources)) {
 
     return $modx->getChunk('certsGrid', ['items' => $htmlCerts]);
 }
-//    $newsResources = $findNewsResources->fetchAll(PDO::FETCH_ASSOC);
-//
-//    $htmlNews = "";
-//
-//    foreach ($newsResources as $news) {
-//        $findNewsParams = $modx->query(
-//            sprintf("SELECT `tmplvarid`, `value` FROM `modx_site_tmplvar_contentvalues` WHERE `contentid` = %s", $news['id'])
-//        );
-//
-//        if (!is_bool($findNewsParams)) {
-//            $params = $findNewsParams->fetchAll();
-//
-//            foreach ($params as $param) {
-//                switch ($param['tmplvarid']) {
-//                    case pageImage : {
-//                        $news += ['pageImage' => $param['value']];
-//                        break;
-//                    }
-//                }
-//            }
-//        }
-//
-//        $htmlNews .= $modx->getChunk('newsCard', $news);
-//    }
-//
-//    return $modx->getChunk('newsView', ['items' => $htmlNews]);
-//
-//} else {
-//    return null;
-//}

@@ -1,3 +1,18 @@
+// Little Description group
+._64787a1a85c80-group {
+    margin-top: 160px;
+    margin-bottom: 120px;
+
+    ._64787a1a85c80  {
+        margin: 0;
+    }
+
+    ._64787a1a85c80 + ._64787a1a85c80 {
+        margin-top: 26px;
+    }
+}
+// Little Description group
+
 // Little Description
 ._64787a1a85c80 {
     display: grid;
@@ -23,7 +38,7 @@
 
     .little-description {
         p {
-            font-family: 'Inter';
+            font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
             font-size: 17px;
@@ -32,6 +47,28 @@
             text-align: justify;
 
             color: #212121;
+
+            margin: 0;
+        }
+    }
+
+    .mini {
+        display: flex;
+        align-items: center;
+        column-gap: 36px;
+
+        p {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 26px;
+
+            text-align: justify;
+
+            color: #212121;
+
+            margin: 0;
         }
     }
 }

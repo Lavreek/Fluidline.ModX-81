@@ -75,9 +75,9 @@ function createPdfView(file, fullView, filePreview) {
     });
 }
 
-let certs = $('.cert-preview');
+let documents = $('.document-preview');
 
-certs.each(function (item) {
-    let cert = certs[item];
-    createPdfView(cert.getAttribute('data-mx-cert'), 'cert-fullview-' + cert.getAttribute('data-mx-cid'), cert.getAttribute('id'));
+documents.each(function (item) {
+    let document = documents[item];
+    createPdfView(document.getAttribute('data-mx-cert'), 'cert-fullview-' + document.getAttribute('data-mx-cid'), document.getAttribute('id'));
 });

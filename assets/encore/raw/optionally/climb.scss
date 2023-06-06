@@ -1,0 +1,15 @@
+._647de5d4774cd {
+    cursor: pointer;
+
+    position: fixed;
+
+    right: 72px;
+    bottom: 72px;
+
+    transition: .5s;
+
+    &.hidden {
+        opacity: 0;
+        transition: .5s;
+    }
+}

@@ -18,4 +18,5 @@ require('bootstrap/dist/js/bootstrap.min');
 require('bootstrap/js/dist/carousel');
 
 import './scripts/pdfjs-view';
+import './scripts/climb';
 

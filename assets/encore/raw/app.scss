@@ -5,8 +5,30 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
+    overflow-x: hidden;
+
     min-width: 100vw;
     min-height: 100vh;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: white #e2e2e2;
+}
+
+*::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 12px;
+    border: 1px solid #e2e2e2;
 }
 
 .b-p {
@@ -19,11 +41,15 @@ body {
 
 @import "blocks/header";
 @import "blocks/footer";
+@import "optionally/talkMe";
+@import "optionally/climb";
 @import "optionally/production_direction.scss";
 @import "optionally/descriptions.scss";
 @import "optionally/products";
+@import "optionally/contactWithUs";
 @import "banners/banner";
 @import "webinars/webinar";
 @import "events/event";
 @import "news/news";
 @import "certificates/certs";
+@import "docs/docs";
