@@ -20,16 +20,18 @@ class HeaderSearch {
         let uniqid = Date.now();
         this.setUniqSearch(uniqid);
 
+        let limit = this.answers.getAttribute('data-search-limit');
+
         if (value !== "") {
-            this.sendRequest(value, uniqid);
+            this.sendRequest(value, uniqid, limit);
         }
     }
 
-    sendRequest(value, uniqid) {
+    sendRequest(value, uniqid, limit) {
         $.ajax({
             type: "POST",
             url: "http://symfony-mongo.loc/api/product/title/search",
-            data: "title=" + value,
+            data: "title=" + value + "&limit=" + limit,
             enctype: 'application/x-www-form-urlencoded',
             contentType: 'application/x-www-form-urlencoded',
             processData: false,
@@ -45,14 +47,15 @@ class HeaderSearch {
                                 return;
                             }
 
-                            let find = response.result[i];
-                            find = find.replace(value, "<span class='hint'>" + value + "</span>");
+                            let search = response.result[i];
+
+                            let title = search['title'];
+                            let tag = search['tag'];
+
+                            let hint = title.replace(value, "<span class='hint'>" + value + "</span>");
 
                             $('#flSiteAnswers').append(
-                                "<a class=\"answer-link\" href='#'>" +
-                                    // find.replace(value, "<span class='hint'>" + value + "</span>") +
-                                    find +
-                                "</a>"
+                                "<a class=\"answer-link\" href='/search?title=" + title + "&tag=" + tag + "'>" + hint + "</a>"
                             );
                         }
                     }

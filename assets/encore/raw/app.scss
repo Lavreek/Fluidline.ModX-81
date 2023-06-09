@@ -1,5 +1,9 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+h1 {
+    margin: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -39,8 +43,10 @@ body {
     }
 }
 
-@import "blocks/header";
+@import "blocks/header/header";
+@import "blocks/header/header-item";
 @import "blocks/footer";
+
 @import "banners/banner";
 
 @import "optionally/talkMe";
@@ -60,3 +66,4 @@ body {
 @import "pages/company/company";
 @import "pages/contacts/contacts";
 @import "pages/information/information";
+@import "pages/search/search";

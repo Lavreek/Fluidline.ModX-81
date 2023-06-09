@@ -94,90 +94,45 @@ header {
         z-index: 1;
 
         .navigation {
+            position: relative;
+
+            cursor: pointer;
+
             .link {
                 @extend .btn !optional;
 
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 15px;
-                line-height: 18px;
-
-                color: #FFFFFF;
-
-                &:hover {
-                    color: black !important;
-                    background: white !important;
-                    background-color: white !important;
-                }
-            }
-
-            .link.active {
-                color: black !important;
-                background: white !important;
-                background-color: white !important;
-                border: 0;
-            }
-        }
-
-        .search {
-            width: 317px;
-            position: relative;
-
-            .answers {
-                display: flex;
-                flex-direction: column;
-
-                position: absolute;
-
-                margin-top: 8px;
-
-                right: 0;
-                left: 0;
-
-                width: 100%;
-                height: auto;
-
-                .answer-link {
-                    width: 100%;
-
-                    background: white;
-                    padding: 10px 12px;
-
+                &-text {
                     font-family: 'Inter';
                     font-style: normal;
-                    font-weight: 300;
+                    font-weight: 500;
                     font-size: 15px;
                     line-height: 18px;
 
-                    color: black;
+                    color: #FFFFFF;
 
-                    .hint {
-                        background: #2088B3;
-                        color: white;
-                        font-weight: 400;
-                        text-decoration: white;
+                    margin: 0;
+
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background: white !important;
+                    background-color: white !important;
+
+                    .link-text {
+                        color: black !important;
                     }
                 }
             }
 
-            input {
-                @extend .form-control !optional;
+            .link.active {
+                background: white !important;
+                background-color: white !important;
+                border: 1px solid white !important;
 
-                border: 0;
-                border-radius: 6px;
-                z-index: -1;
-            }
-
-            img {
-                height: 65%;
-
-                position: absolute;
-                top: 0;
-                right: 8px;
-                bottom: 0;
-
-                margin: auto;
+                .link-text {
+                    color: black !important;
+                }
             }
         }
     }

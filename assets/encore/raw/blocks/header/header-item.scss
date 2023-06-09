@@ -1,0 +1,52 @@
+.link:hover ._648326e99c119 {
+    display: flex;
+}
+
+.link:hover ._648326e99c119.products {
+    display: grid;
+}
+
+
+._648326e99c119.products {
+    grid-template-columns: repeat(2, auto);
+
+    margin-left: unset !important;
+    left: calc(-10 * var(--bs-btn-padding-x)) !important;
+}
+
+._648326e99c119 {
+    display: none;
+    flex-direction: column;
+
+    position: absolute;
+
+    padding-top: 13px;
+    margin-left: calc(-1 * var(--bs-btn-padding-x));
+
+    .hm-p {
+
+        //background: white;
+    }
+
+    a {
+        display: block;
+
+        padding: 12px 26px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+
+        color: #000000;
+
+        text-align: left;
+
+        background: white;
+
+        &:hover {
+            background: rgb(206, 228, 237);
+        }
+    }
+}
