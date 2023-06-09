@@ -41,20 +41,22 @@ body {
 
 @import "blocks/header";
 @import "blocks/footer";
+@import "banners/banner";
+
 @import "optionally/talkMe";
 @import "optionally/climb";
 @import "optionally/production_direction.scss";
 @import "optionally/descriptions.scss";
 @import "optionally/products";
 @import "optionally/contactWithUs";
-@import "banners/banner";
-@import "webinars/webinar";
-@import "events/event";
 
-@import "news/news-cards";
-@import "news/news-rows";
-
-@import "certificates/certs";
 @import "docs/docs";
 
+@import "pages/certificates/certs";
+@import "pages/events/event";
+@import "pages/news/news-cards";
+@import "pages/news/news-rows";
+@import "pages/webinars/webinar";
 @import "pages/company/company";
+@import "pages/contacts/contacts";
+@import "pages/information/information";

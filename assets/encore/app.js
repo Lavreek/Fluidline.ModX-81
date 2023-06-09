@@ -1,4 +1,7 @@
 // assets/app.js
+
+// import { registerReactControllerComponents } from '@symfony/ux-react';
+
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -8,15 +11,17 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 
+// registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
+
 import './raw/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
-
 
 require('bootstrap/dist/js/bootstrap.min');
 require('bootstrap/js/dist/carousel');
 
 import './scripts/pdfjs-view';
 import './scripts/climb';
+import './scripts/Search';
 
